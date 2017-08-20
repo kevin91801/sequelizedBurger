@@ -3,7 +3,7 @@ var db = require("../models/");
 module.exports = function(app) {
 
 
-  app.get("/burgers", function(req, res) {
+  app.get("/", function(req, res) {
     db.Burger.findAll({})
       .then(function(result) {
         res.json(result);
